@@ -21,4 +21,4 @@ bool _isWithinTimeRange({required int startHour, required int endHour}) {
 }
 
 bool canEnableExpressExperience() =>
-    _isWithinTimeRange(startHour: 10, endHour: 17);
+    _isWithinTimeRange(startHour: 10, endHour: 16);
