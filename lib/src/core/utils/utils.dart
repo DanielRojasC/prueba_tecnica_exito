@@ -14,7 +14,6 @@ NumberFormat currencyFormat = NumberFormat.currency(
 String convertIntIntoCurrency(double amount) => currencyFormat.format(amount);
 
 bool _isWithinTimeRange({required int startHour, required int endHour}) {
-  assert(startHour < endHour, 'El horario de inicio debe ser menor al final');
   final currentHour = DateTime.now().hour;
 
   return currentHour >= startHour && currentHour < endHour;
