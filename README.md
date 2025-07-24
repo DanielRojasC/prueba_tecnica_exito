@@ -124,3 +124,46 @@ Se utilizan reglas avanzadas de linting con `dart_code_linter` y `flutter_lints`
 
 ---
 
+### 📊 Métricas de calidad del código
+
+Este proyecto incorpora `dart_code_linter` para aplicar estándares de codificación y monitorear métricas clave de calidad del software.
+
+#### ▶️ Cómo generar el reporte
+
+Para generar un reporte en formato HTML con las métricas de calidad del código, se debe ejecutar el siguiente comando desde la raíz del proyecto:
+
+bash
+
+CopyEdit
+
+`dart run dart_code_linter:metrics analyze lib --reporter=html`
+
+Este comando analiza el contenido del directorio `lib/` y produce un reporte estático en HTML.
+
+#### 📁 Visualización del reporte
+
+El reporte generado se encuentra en la siguiente ruta:
+
+bash
+
+CopyEdit
+
+`metrics/index.html`
+
+Al abrir este archivo en un navegador, se accede a un panel visual con las métricas e indicadores, entre los cuales se destacan:
+
+-   **Cyclomatic Complexity**: mide la complejidad del flujo de control en funciones y métodos.
+
+-   **Maintainability Index**: indica qué tan fácil es mantener el código.
+
+-   **Lines of Code (LOC)**: número total de líneas y líneas por función o clase.
+
+-   **Maximum Nesting Level**: muestra el nivel máximo de anidamiento en estructuras de control.
+
+-   **Number of Arguments**: identifica funciones con un número elevado de parámetros.
+
+-   **Linter Rule Violations**: presenta todas las reglas del linter que fueron infringidas durante el análisis.
+
+Este reporte permite detectar problemas potenciales y mantener una base de código limpia, mantenible y escalable.
+
+* * * * *
