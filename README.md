@@ -144,9 +144,6 @@ Este comando analiza el contenido del directorio `lib/` y produce un reporte est
 
 El reporte generado se encuentra en la siguiente ruta:
 
-bash
-
-CopyEdit
 
 `metrics/index.html`
 
