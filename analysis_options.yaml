@@ -1,0 +1,102 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+    plugins:
+        - dart_code_linter
+    exclude:
+        - test/**
+        - lib/**/*.g.dart
+        - lib/**/*.freezed.dart
+        - lib/**/*.gr.dart
+        - lib/generated/**
+
+    errors:
+        todo: ignore
+
+formatter:
+    trailing_commas: preserve
+
+linter:
+    rules:
+        # ✅ Style & Code Consistency
+        - always_put_control_body_on_new_line
+        - avoid_multiple_declarations_per_line
+        - directives_ordering
+        - join_return_with_assignment
+        - prefer_expression_function_bodies
+        - prefer_final_locals
+        - prefer_const_constructors
+        - prefer_const_literals_to_create_immutables
+        - prefer_const_declarations
+        - use_super_parameters
+        - sort_pub_dependencies
+        - sort_unnamed_constructors_first
+        - require_trailing_commas
+
+        # ✅ Safety & Best Practices
+        - avoid_annotating_with_dynamic
+        - avoid_catching_errors
+        - avoid_catches_without_on_clauses
+        - only_throw_errors
+        - avoid_escaping_inner_quotes
+        - avoid_void_async
+        - avoid_unused_constructor_parameters
+        - avoid_returning_this
+        - use_key_in_widget_constructors
+        - use_if_null_to_convert_nulls_to_bools
+        - throw_in_finally
+        - unnecessary_await_in_return
+        - unnecessary_null_checks
+        - unnecessary_parenthesis
+        - avoid_unnecessary_containers
+        - avoid_final_parameters
+
+        # ✅ Architecture & Intent
+        - prefer_constructors_over_static_methods
+        - type_annotate_public_apis
+        - prefer_asserts_in_initializer_lists
+        - prefer_asserts_with_message
+
+        # ✅ Null safety & correctness
+        - no_logic_in_create_state
+
+        # ✅ Async and resource safety
+        - cancel_subscriptions
+        - close_sinks
+
+dart_code_linter:
+    rules:
+        - prefer-trailing-comma
+        - newline-before-return
+        - member-ordering
+        - avoid-returning-widgets
+        - prefer-single-widget-per-file:
+              ignore-private-widgets: true
+
+    anti-patterns:
+        - long_method
+
+        - long_parameter_list
+        - god_class
+        - data_class
+        - long_widget
+        - duplicated_code
+        - eager_initialization
+
+    metrics:
+        cyclomatic-complexity: 20
+        halstead-volume: 320
+        lines-of-code: 100
+        maintainability-index: 50
+        maximum-nesting-level: 5
+        number-of-methods: 15
+        number-of-parameters: 8
+        source-lines-of-code: 150
+        weight-of-class:
+            threshold: 0.33
+            exclude:
+                - lib/src/core/common/network/dio_client.dart
+        number-of-arguments: 6
+
+    metrics-exclude:
+        - test/**
